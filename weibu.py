@@ -766,6 +766,7 @@ def classify_status(row):
     name = (row.get("status_name") or "").strip()
 
     if name == "DSQ":     return "DSQ"
+    if name == "DNF":     return "TIMEOUT"
     if name == "被关门":   return "TIMEOUT"
     if name == "已退赛":   return "WITHDREW"
     if name == "待参赛":   return "DNS"
